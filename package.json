@@ -1,0 +1,11 @@
+{
+  "name": "Burmese-Craving",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:heinhtikezaw123/Burmese-Craving.git",
+  "author": "heinhtike123 <heinhtikezaw2021hh@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
