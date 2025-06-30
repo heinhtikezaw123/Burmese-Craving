@@ -1,0 +1,7 @@
+node_modules
+ .env
+ .env.copy
+ .env.example
+package-lock.json
+yarn.lock
+config.json

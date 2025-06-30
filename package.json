@@ -1,0 +1,47 @@
+{
+  "name": "Burmese-Craving",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:heinhtikezaw123/Burmese-Craving.git",
+  "author": "heinhtike123 <heinhtikezaw2021hh@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.731.1",
+    "@aws-sdk/lib-storage": "^3.731.1",
+    "aws-sdk": "^2.1692.0",
+    "bcrypt": "^5.1.1",
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.5",
+    "date-fns-tz": "^3.1.3",
+    "dotenv": "^16.4.7",
+    "express": "^5.1.0",
+    "express-session": "^1.18.0",
+    "express-validator": "^7.2.1",
+    "jsonwebtoken": "^9.0.2",
+    "moment-timezone": "^0.5.45",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "multer-s3": "^3.0.1",
+    "mysql2": "^3.11.0",
+    "nodemailer": "^7.0.4",
+    "passport": "^0.7.0",
+    "passport-google-oauth20": "^2.0.0",
+    "pg": "^8.14.1",
+    "pg-hstore": "^2.3.4",
+    "pusher": "^5.2.0",
+    "qs": "^6.14.0",
+    "sequelize": "^6.37.7"
+  },
+  "scripts": {
+    "dev": "node --watch app.js",
+    "migrate": "npx sequelize-cli db:migrate",
+    "migrate:undo": "npx sequelize-cli db:migrate:undo",
+    "migrate:fresh": "npx sequelize-cli db:migrate:undo:all && npx sequelize-cli db:migrate",
+    "migrate:fresh:seed": "npm run migrate:fresh && npx sequelize-cli db:seed:all"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4",
+    "sequelize-cli": "^6.6.3"
+  }
+}

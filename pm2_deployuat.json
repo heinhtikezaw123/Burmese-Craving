@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "name": "Burmese-Craving",
+      "script": "./app.js",
+      "watch": false,
+      "exec_mode": "cluster",
+      "autorestart": true
+    }
+  ]
+}
