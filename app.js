@@ -9,6 +9,7 @@ const cookieParser = require("cookie-parser");
 // const globalErrorHandler = require("./middleware/globalErrorHandler");
 
 const authRouter = require("./src/routes/AuthRoute");
+const testRouter = require("./src/routes/TestRoute");
 
 //assigning the variable app to express
 const app = express();
@@ -22,9 +23,10 @@ app.use(cookieParser()); //can use by parsing req.cookies`
 
 //all routes will be here
 app.use("/api/v1/auth", authRouter);
+app.use("/api/v1/test", testRouter);
 
-// app.use(async (req, res , next) => {
-//   throw new AppError(`Can't find ${req.originalUrl} on this server`,404);
+// app.use(async (req, res, next) => {
+//   throw new AppError(`Can't find ${req.originalUrl} on this server`, 404);
 // });
 
 // app.use(globalErrorHandler);

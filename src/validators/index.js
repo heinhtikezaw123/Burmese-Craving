@@ -4,6 +4,7 @@ const { verifyOTP } = require("./auth/verify-otp");
 const { emailCheck } = require("./auth/email-check");
 const { resetPassword } = require("./auth/reset-password");
 const { changePassword } = require("./auth/change-password");
+const { testValidation } = require("./test/test");
 
 const { validationResult } = require("express-validator");
 
@@ -42,5 +43,6 @@ module.exports = {
   emailCheck,
   resetPassword,
   changePassword,
+  testValidation,
   validate,
 };
