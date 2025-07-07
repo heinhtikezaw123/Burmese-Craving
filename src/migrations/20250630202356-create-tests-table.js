@@ -13,6 +13,10 @@ module.exports = {
         type: Sequelize.STRING(50),
         allowNull: false,
       },
+      profile: {
+        type: Sequelize.STRING,
+        allowNull: true,
+      },
       bio: {
         type: Sequelize.TEXT,
         allowNull: true,
@@ -46,6 +50,16 @@ module.exports = {
       lastLogin: {
         type: Sequelize.DATE,
         allowNull: true,
+      },
+      role_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: {
+          model: "roles",
+          key: "id",
+        },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE",
       },
       userRole: {
         type: Sequelize.ENUM("admin", "user", "guest"),

@@ -4,6 +4,8 @@ exports.testValidation = [
   // UUID - optional for create, but must be UUID if provided
   check("uuid").optional().isUUID().withMessage("Invalid UUID format."),
 
+  check("role_id").not().isEmpty().withMessage("Role is required."),
+
   // username - required, string, max length 50
   check("username")
     .not()

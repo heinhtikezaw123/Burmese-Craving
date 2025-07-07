@@ -5,6 +5,14 @@ const Test = db.Test;
 exports.createTest = async (req, res) => {
   try {
     const testData = req.body;
+
+    // multer adds `file` property when a single file uploaded
+    if (req.file) {
+      // For example, save relative path or filename
+      testData.profile = req.file.path.replace(/\\/g, "/"); // normalize path for DB
+      // Or just filename: req.file.filename
+    }
+
     const newTest = await Test.create(testData);
     return res.status(201).json({ success: true, data: newTest });
   } catch (error) {

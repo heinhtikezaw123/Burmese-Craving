@@ -15,6 +15,10 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.STRING(50),
         allowNull: false,
       },
+      profile: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
       bio: {
         type: DataTypes.TEXT,
       },
@@ -55,6 +59,17 @@ module.exports = (sequelize, DataTypes) => {
       userRole: {
         type: DataTypes.ENUM("admin", "user", "guest"),
         defaultValue: "user",
+      },
+
+      role_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+          model: "roles", // <-- use the table name directly
+          key: "id",
+        },
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
       },
 
       // JSON type
