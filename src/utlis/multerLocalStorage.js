@@ -14,10 +14,10 @@ const storage = multer.diskStorage({
     let folder = "Storage";
     const userId = req.params?.id || "unknownUser";
 
-    if (req.originalUrl.includes("/test") && file.fieldname === "photo") {
-      folder = `/profile/${userId}`;
+    if (req.originalUrl.includes("/test") && file.fieldname === "profile") {
+      folder = path.join("Storage", "profile", userId);
     } else if (req.originalUrl.includes("/profile")) {
-      folder = `/profile/temp_uploads`;
+      folder = path.join("Storage", "profile", "temp_uploads");
     }
 
     ensureDirExists(folder);
